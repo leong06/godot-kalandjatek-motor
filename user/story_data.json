@@ -1,0 +1,295 @@
+{
+  "start": {
+	"title": "The Enchanted Forest",
+	"narr_text": "You are a brave adventurer entering an enchanted forest. Legends speak of a hidden treasure guarded by mystical creatures. Your health is full, mana flows through you, and you have a few coins in your pouch. What will you do first?",
+	"choices": {
+	  "1": {
+		"text": "Follow the glowing path into the woods (Perception check: d20 > 12)",
+		"output": "deep_forest",
+		"failed_output": "ambush",
+		"dice_test": {
+		  "sides": 20,
+		  "threshold": 12
+		}
+	  },
+	  "2": {
+		"text": "Climb a tree to get a better view (Strength check: d20 > 8)",
+		"output": "tree_view",
+		"failed_output": "fall",
+		"dice_test": {
+		  "sides": 20,
+		  "threshold": 8
+		},
+		"requirement": {
+		  "health": 50
+		}
+	  },
+	  "3": {
+		"text": "Cast a detection spell to sense magic (Mana cost: 10)",
+		"output": "magic_sense",
+		"failed_output": "mana_low",
+		"requirement": {
+		  "mana": 10
+		}
+	  }
+	}
+  },
+  "deep_forest": {
+	"title": "Deeper into the Woods",
+	"narr_text": "The path leads you to a clearing with ancient runes on the ground. You sense great power here, but a riddle blocks your way: 'I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?'",
+	"choices": {
+	  "1": {
+		"text": "Answer: An echo (Intelligence check: d10 > 5)",
+		"output": "treasure_found",
+		"failed_output": "rune_trap",
+		"dice_test": {
+		  "sides": 10,
+		  "threshold": 5
+		},
+		"buffs": {
+		  "coins": 50
+		}
+	  },
+	  "2": {
+		"text": "Try to bypass the runes physically",
+		"output": "rune_trap"
+	  }
+	}
+  },
+  "ambush": {
+	"title": "Goblin Ambush!",
+	"narr_text": "You didn't notice the goblins hiding in the bushes. They leap out with daggers drawn! You must fight or flee.",
+	"choices": {
+	  "1": {
+		"text": "Fight the goblins (Combat roll: d20 > 15)",
+		"output": "victory",
+		"failed_output": "defeat",
+		"dice_test": {
+		  "sides": 20,
+		  "threshold": 15
+		},
+		"buffs": {
+		  "health": -20
+		}
+	  },
+	  "2": {
+		"text": "Flee back to the entrance",
+		"output": "start"
+	  }
+	}
+  },
+  "tree_view": {
+	"title": "From the Treetops",
+	"narr_text": "From your vantage point, you spot a river leading to a waterfall. It looks promising. Descending carefully, you head that way.",
+	"choices": {
+	  "1": {
+		"text": "Swim across the river (Swim check: d12 > 6)",
+		"output": "waterfall_cave",
+		"failed_output": "drown_attempt",
+		"dice_test": {
+		  "sides": 12,
+		  "threshold": 6
+		}
+	  },
+	  "2": {
+		"text": "Search for a bridge",
+		"output": "bridge_found"
+	  }
+	}
+  },
+  "fall": {
+	"title": "A Tumble Down",
+	"narr_text": "Your foot slips on a branch, and you fall awkwardly, bruising yourself. Ouch! You lose some health but manage to land safely.",
+	"choices": {
+	  "1": {
+		"text": "Get back up and continue",
+		"output": "tree_view",
+		"buffs": {
+		  "health": -15
+		}
+	  }
+	}
+  },
+  "magic_sense": {
+	"title": "Arcane Whispers",
+	"narr_text": "Your spell reveals threads of magic weaving through the trees. One path pulses with danger, another with opportunity. You deduct 10 mana for the spell.",
+	"choices": {
+	  "1": {
+		"text": "Follow the safe path",
+		"output": "deep_forest",
+		"buffs": {
+		  "mana": -10
+		}
+	  },
+	  "2": {
+		"text": "Investigate the dangerous one (Risky roll: d6 > 3)",
+		"output": "hidden_gem",
+		"failed_output": "ambush",
+		"dice_test": {
+		  "sides": 6,
+		  "threshold": 3
+		},
+		"buffs": {
+		  "mana": -10
+		}
+	  }
+	}
+  },
+  "mana_low": {
+	"title": "Mana Exhaustion",
+	"narr_text": "Your spell fizzles out due to low mana. You feel drained and decide to rest a bit.",
+	"choices": {
+	  "1": {
+		"text": "Rest and recover some mana",
+		"output": "start",
+		"buffs": {
+		  "mana": 20
+		}
+	  }
+	}
+  },
+  "treasure_found": {
+	"title": "The Treasure!",
+	"narr_text": "The runes part, revealing a chest filled with gold and a magical amulet. You've completed your quest! Congratulations!",
+	"choices": {}
+  },
+  "rune_trap": {
+	"title": "Rune Trap Activated",
+	"narr_text": "The runes glow angrily, zapping you with arcane energy. You stagger back, weakened.",
+	"choices": {
+	  "1": {
+		"text": "Try again with the riddle",
+		"output": "deep_forest",
+		"buffs": {
+		  "health": -30
+		}
+	  }
+	}
+  },
+  "victory": {
+	"title": "Goblin Victory",
+	"narr_text": "With skillful strikes, you dispatch the goblins and loot their camp. A small victory!",
+	"choices": {
+	  "1": {
+		"text": "Press on to the clearing",
+		"output": "deep_forest",
+		"buffs": {
+		  "coins": 20
+		}
+	  }
+	}
+  },
+  "defeat": {
+	"title": "Overpowered",
+	"narr_text": "The goblins overwhelm you, leaving you battered and fleeing into the woods.",
+	"choices": {
+	  "1": {
+		"text": "Limp back to safety",
+		"output": "start",
+		"buffs": {
+		  "health": -40
+		}
+	  }
+	}
+  },
+  "waterfall_cave": {
+	"title": "Behind the Waterfall",
+	"narr_text": "You swim successfully and discover a hidden cave with glowing crystals. One seems particularly valuable.",
+	"choices": {
+	  "1": {
+		"text": "Harvest a crystal (Stealth roll: d20 > 14)",
+		"output": "crystal_success",
+		"failed_output": "crystal_shatter",
+		"dice_test": {
+		  "sides": 20,
+		  "threshold": 14
+		}
+	  }
+	}
+  },
+  "drown_attempt": {
+	"title": "Struggling in the Current",
+	"narr_text": "The river's current pulls you under briefly. You cough up water but make it to shore, exhausted.",
+	"choices": {
+	  "1": {
+		"text": "Catch your breath and try again",
+		"output": "waterfall_cave",
+		"buffs": {
+		  "health": -10
+		}
+	  }
+	}
+  },
+  "bridge_found": {
+	"title": "The Rickety Bridge",
+	"narr_text": "You find an old bridge crossing the river. It looks unstable, but it's your way forward.",
+	"choices": {
+	  "1": {
+		"text": "Cross carefully",
+		"output": "waterfall_cave"
+	  }
+	}
+  },
+  "hidden_gem": {
+	"title": "A Hidden Gem",
+	"narr_text": "Amid the danger, you uncover a small gem pulsing with energy. It restores some of your mana!",
+	"choices": {
+	  "1": {
+		"text": "Continue to the clearing",
+		"output": "deep_forest",
+		"buffs": {
+		  "mana": 15
+		}
+	  }
+	}
+  },
+  "crystal_success": {
+	"title": "Crystal Harvested",
+	"narr_text": "You pocket the crystal, which hums with power. It might be worth a fortune!",
+	"choices": {
+	  "1": {
+		"text": "Head back with your prize",
+		"output": "treasure_found",
+		"buffs": {
+		  "coins": 100
+		}
+	  }
+	}
+  },
+  "crystal_shatter": {
+	"title": "Shattered Crystal",
+	"narr_text": "Your hand slips, and the crystal shatters, releasing a burst of energy that singes you.",
+	"choices": {
+	  "1": {
+		"text": "Leave the cave",
+		"output": "start",
+		"buffs": {
+		  "health": -25
+		}
+	  }
+	}
+  },
+  "health_is_zero": {
+	"title": "Game Over",
+	"narr_text": "Your health has reached zero. The forest claims another victim. Better luck next time!",
+	"choices": {
+	  "1": {
+		"text": "Restart Adventure",
+		"output": "start"
+	  }
+	}
+  },
+  "mana_is_zero": {
+	"title": "Mana Depleted",
+	"narr_text": "Without mana, your spells fail, and you feel vulnerable. Rest or find a potion.",
+	"choices": {
+	  "1": {
+		"text": "Search for a mana source",
+		"output": "start",
+		"buffs": {
+		  "mana": 50
+		}
+	  }
+	}
+  }
+}

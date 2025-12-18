@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bqyj23m0yjbg4"]
+
+[ext_resource type="Texture2D" uid="uid://cs8sjlva5v8v3" path="res://Assets/Textures/button_brown.png" id="1_fpnoy"]
+[ext_resource type="FontFile" uid="uid://ccgo33bqi72gs" path="res://Assets/Fonts/Firlest-Regular.otf" id="1_hvff6"]
+[ext_resource type="Texture2D" uid="uid://3stg8ci48r10" path="res://Assets/Textures/panel_brown_dark_corners_a.png" id="1_p34fc"]
+[ext_resource type="Texture2D" uid="uid://4n0jx4hb2y2a" path="res://Assets/Textures/panel_grey.png" id="2_56vpe"]
+[ext_resource type="Texture2D" uid="uid://dfu3aqn66i446" path="res://Assets/Textures/panel_brown_damaged.png" id="2_y0vxj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56vpe"]
+texture = ExtResource("1_fpnoy")
+texture_margin_left = 29.0
+texture_margin_top = 20.0
+texture_margin_right = 29.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvff6"]
+texture = ExtResource("2_56vpe")
+texture_margin_left = 29.0
+texture_margin_top = 29.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0vxj"]
+texture = ExtResource("1_p34fc")
+texture_margin_left = 44.0
+texture_margin_top = 35.0
+texture_margin_right = 40.0
+texture_margin_bottom = 35.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpnoy"]
+texture = ExtResource("2_y0vxj")
+texture_margin_left = 44.0
+texture_margin_top = 35.0
+texture_margin_right = 44.0
+texture_margin_bottom = 35.0
+
+[resource]
+BoldLabel/base_type = &"Label"
+BoldLabel/colors/font_color = Color(0.698135, 0.543443, 0.395053, 1)
+BoldLabel/font_sizes/font_size = 80
+BoldLabel/fonts/font = ExtResource("1_hvff6")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/normal = SubResource("StyleBoxTexture_56vpe")
+DarkLabel/base_type = &"Label"
+DarkLabel/colors/font_color = Color(0, 0, 0, 1)
+EditorPanel/base_type = &"Panel"
+EditorPanel/styles/panel = SubResource("StyleBoxTexture_hvff6")
+Label/font_sizes/font_size = 30
+MarginContainer/constants/margin_left = 15
+MarginContainer/constants/margin_right = 15
+MenuButton/colors/font_color = Color(1, 1, 1, 1)
+Panel/styles/panel = SubResource("StyleBoxTexture_y0vxj")
+ReadingPanelLight/base_type = &"Panel"
+ReadingPanelLight/styles/panel = SubResource("StyleBoxTexture_fpnoy")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)

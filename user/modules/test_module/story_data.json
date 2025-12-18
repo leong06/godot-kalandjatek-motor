@@ -1,0 +1,31 @@
+{
+	"start": {
+		"title": "Begin Adventure",
+		"narr_text": "You embark on a quest.",
+		"choices": {
+			"1": {
+				"text": "Cast a spell",
+				"output": "spell_cast",
+				"failed_output": "spell_failed",
+				"requirement": {"mana": 20},
+				"buffs": {"mana": -20, "health": 10}
+			},
+			"2": {
+				"text": "Buy a potion",
+				"output": "potion_bought",
+				"failed_output": "no_coins",
+				"requirement": {"coins": 10},
+				"buffs": {"coins": -10, "health": 20}
+			},
+			"3": {
+				"text": "Continue",
+				"output": "next_scene"
+			},
+			"4": {
+				"text": "Rest",
+				"output": "rested",
+				"buffs": {"health": 10, "mana": 10}
+			}
+		}
+	}
+}

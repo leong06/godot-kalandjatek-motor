@@ -1,0 +1,82 @@
+{
+  "000_prologue": {
+	"title": "Chapter 1: The Whispering Woods",
+	"narr_text": "You find yourself standing at the entrance of the Whispering Woods, an ancient forest rumored to hold secrets long forgotten. The path ahead splits into two: one leading towards a dense thicket, the other towards a faintly glowing clearing.",
+	"choices": {
+	  "1": {
+		"text": "Enter the dense thicket",
+		"output": "002_thicket"
+	  },
+	  "2": {
+		"text": "Head towards the glowing clearing",
+		"output": "002_clearing"
+	  }
+	}
+  },
+  
+  "002_thicket": {
+	"title": "Chapter 2: The Shadowed Path",
+	"narr_text": "You push through the thick underbrush, branches clawing at your cloak. The air grows colder as an eerie silence settles. A pair of glowing eyes watch from the darkness.",
+	"choices": {
+	  "1": {
+		"text": "Call out to the creature",
+		"output": "003_creature_encounter"
+	  },
+	  "2": {
+		"text": "Turn back the way you came",
+		"output": "001_intro"
+	  }
+	}
+  },
+  
+  "002_clearing": {
+	"title": "Chapter 2: The Spirit's Embrace",
+	"narr_text": "You step into the glowing clearing, where an ethereal figure materializes before you. The forest spirit extends a hand, offering guidance on your journey.",
+	"choices": {
+	  "1": {
+		"text": "Accept the spirit’s guidance",
+		"output": "003_spirit_guidance"
+	  },
+	  "2": {
+		"text": "Refuse the guidance and continue alone",
+		"output": "003_refuse_guidance"
+	  }
+	}
+  },
+  
+  "003_creature_encounter": {
+	"title": "Chapter 3: The Watcher in the Dark",
+	"narr_text": "The creature steps forward, revealing itself to be a massive, wolf-like beast with eyes that shimmer like the stars. It does not attack but waits expectantly.",
+	"choices": {
+	  "1": {
+		"text": "Offer it food",
+		"output": "004_befriend_beast"
+	  },
+	  "2": {
+		"text": "Run away into the forest",
+		"output": "004_flee"
+	  }
+	}
+  },
+  
+  "003_spirit_guidance": {
+	"title": "Chapter 3: The Gift of Knowledge",
+	"narr_text": "The spirit whispers ancient words, and a wave of understanding washes over you. Your path becomes clearer, and you feel an unseen force guiding you forward.",
+	"choices": {
+	  "1": {
+		"text": "Continue your journey with the spirit’s blessing",
+		"output": "004_guided_path"
+	  }
+	}
+  },
+  
+  "003_refuse_guidance": {
+	"title": "Chapter 3: The Lonely Road",
+	"narr_text": "You refuse the guardian's offer and continue alone. The path ahead is treacherous, but you steel yourself for the journey.",
+	"choices": {
+	  "1": {
+		"text": "End of Sample"
+	  }
+	}
+  }
+}

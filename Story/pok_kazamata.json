@@ -1,0 +1,404 @@
+{
+  "000_prologue": {
+	"title": "Fejezet 1: A Holló Vára",
+	"picture": "res://Assets/Art/dungeon.jpg",
+	"narr_text": "A Feketeerdő peremén magasodik Holló Vára, melynek zord ura, Kázmér gróf kétségbeesett segítséget kér. Titokzatos eltűnések nyugtalanítják a környék lakosait, és a várúr jutalmul kínálja lánya kezét és birtokai egy részét annak, aki felderíti az igazságot. A várfalak tövében régi kazamatabejárat ásít feketén. Úgy tűnik, a válaszok a föld mélyén rejtőznek.",
+	"choices": {
+	  "1": {
+		"text": "Beszélgess Kázmér gróffal az eltűnésekről",
+		"output": "002_grofbeszed"
+	  },
+	  "2": {
+		"text": "Kérdezd ki a helyi fogadóst a pletykákról",
+		"output": "002_fogados"
+	  },
+	  "3": {
+		"text": "Azonnal ereszkedj le a kazamatába",
+		"output": "002_azonnalbe"
+	  }
+	}
+  },
+  
+  "002_grofbeszed": {
+	"title": "Fejezet 2: A Gróf Szavai",
+	"narr_text": "Kázmér gróf komor tekintettel meséli el, hogy három hete kezdődtek az eltűnések. Először csak szolgálók és parasztok tűntek el, de a múlt héten legkedvesebb vadásza is nyomtalanul eltűnt a kazamatában. 'Évtizedek óta senki nem járt ott lent,' mondja. 'Nagyapám idején zárták le, miután furcsa dolgokról számoltak be a katonái.' A gróf egy ősi pergamenre mutat, melyen mágikus jelekkel körülvett pók alakja látható.",
+	"choices": {
+	  "1": {
+		"text": "Kérd el a pergament további vizsgálatra",
+		"output": "003_pergamen"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, ki ismerheti még a kazamata titkait",
+		"output": "003_varazslotanacsado"
+	  },
+	  "3": {
+		"text": "Indulj a kazamatához fáklyával és karddal",
+		"output": "003_kazamatale"
+	  }
+	}
+  },
+  
+  "002_fogados": {
+	"title": "Fejezet 2: A Fogadós Pletykái",
+	"narr_text": "A Részeg Holló fogadósa, Tamás bácsi, körülnéz, majd közelebb hajol hozzád. 'Nem kellene erről beszélnem,' suttogja, 'de azt mondják, a gróf őse, Zoltán lovag, valamit felébresztett ott lent. Egy szörnyeteget, mely selyemszálakkal várja áldozatait.' Az öreg fogadós remegő kézzel egy amulettet húz elő. 'Ezt vegyéd magadhoz, fiam. Állítólag megvéd a Nyolclábú Halál érintésétől. Nagyapámé volt, aki egyike a kevés túlélőknek.'",
+	"choices": {
+	  "1": {
+		"text": "Elfogadod az amulettet és indulsz a kazamatához",
+		"output": "003_amulett"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, ki más élte túl a régi találkozást",
+		"output": "003_oregremetelakja"
+	  },
+	  "3": {
+		"text": "Kérdezd meg, hallott-e a fogadós az ősi pergamenről",
+		"output": "003_pergamenpletyka"
+	  }
+	}
+  },
+  
+  "002_azonnalbe": {
+	"title": "Fejezet 2: A Kazamata Bejárata",
+	"narr_text": "A nyikorgó vasajtó nehezen enged a nyomásnak. Dohos levegő csap az arcodba, ahogy belépsz a sötét lépcsőházba. Fáklyád fényében pókhálók ezrei csillognak a falakon. Nem közönséges pókhálók ezek – vastagabbak, szívósabbak, mint bármi, amit valaha láttál. A lépcső lefelé kanyarog a sötétségbe, és mintha halk, sziszegő hangokat hallanál a mélyből.",
+	"choices": {
+	  "1": {
+		"text": "Óvatosan ereszkedj le a lépcsőn",
+		"output": "003_lepcsofolyoso"
+	  },
+	  "2": {
+		"text": "Vizsgáld meg alaposabban a pókhálókat",
+		"output": "003_pokhalok"
+	  },
+	  "3": {
+		"text": "Fordulj vissza segítségért",
+		"output": "003_visszaavarnephez"
+	  }
+	}
+  },
+  
+  "003_pergamen": {
+	"title": "Fejezet 3: Az Ősi Pergamen",
+	"narr_text": "A pergamen bőrszerű tapintású, és furcsa módon meleg az érintésre. A rajta lévő szimbólumok mintha mozognának a szemed sarkából nézve. A központi ábrán egy nyolclábú lény látható, mely emberszerű arcot visel. A latin szöveg részben elmosódott, de annyit ki tudsz venni: 'A Fonó, ki az idők előtt született, álmodik a mélyben. Ne zavard álmát, mert ha felébred, eljön az éhség ideje.' A pergamen alján egy varázsige részletei olvashatók, mely talán védelmet nyújthat.",
+	"choices": {
+	  "1": {
+		"text": "Memorizáld a varázsigét és indulj a kazamatába",
+		"output": "004_varazsige"
+	  },
+	  "2": {
+		"text": "Mutasd meg a pergament a várban élő öreg tudósnak",
+		"output": "004_tudos"
+	  },
+	  "3": {
+		"text": "Keress további információt a vár könyvtárában",
+		"output": "004_konyvtar"
+	  }
+	}
+  },
+  
+  "003_varazslotanacsado": {
+	"title": "Fejezet 3: A Varázsló Tanácsadó",
+	"narr_text": "A gróf elküld Marzio mágushoz, aki a vár keleti tornyában él. Az ősz varázsló összerezzen, amikor megemlíted a kazamatát. 'A Fonó még mindig ott lent van,' suttogja. 'Zoltán lovag pecsétje gyengül. Ez magyarázza az eltűnéseket.' A varázsló egy ládát nyit ki, melyből ezüstporral teli zacskót és egy különös, görbe tőrt vesz elő. 'Az ezüst lassítja, a tőr megsebezheti. Többet nem tehetek érted. Ha szembenézel vele, ne nézz a szemébe, különben elveszíted lelkedet.'",
+	"choices": {
+	  "1": {
+		"text": "Elfogadod az ajándékokat és indulsz a kazamatába",
+		"output": "004_ezustpor"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, mi történt Zoltán lovaggal",
+		"output": "004_zoltanlovag"
+	  },
+	  "3": {
+		"text": "Kérdezd meg, hogyan lehet végleg legyőzni a teremtményt",
+		"output": "004_gyozelemterv"
+	  }
+	}
+  },
+  
+  "003_kazamatale": {
+	"title": "Fejezet 3: Leereszkedés a Mélybe",
+	"narr_text": "Fáklyád fénye árnyakat táncol a falakra, ahogy óvatosan ereszkedsz le a kazamata csigalépcsőjén. A kövek között pókhálók feszülnek, melyek erősebbek a közönséges hálóknál – kardod is alig vágja át őket. Ahogy mélyebbre jutsz, apró, fehér pókok százai menekülnek fáklyád fénye elől. A lépcső egy hatalmas, boltozatos terembe vezet, ahol öt járat nyílik különböző irányokba. A padlón friss vérnyomok húzódnak a középső járat felé.",
+	"choices": {
+	  "1": {
+		"text": "Kövesd a vérnyomokat",
+		"output": "004_vernyomok"
+	  },
+	  "2": {
+		"text": "Válaszd a bal szélső, száraznak tűnő járatot",
+		"output": "004_szarazjarat"
+	  },
+	  "3": {
+		"text": "Vizsgáld meg alaposabban a termet",
+		"output": "004_teremvizsgalat"
+	  }
+	}
+  },
+  
+  "003_amulett": {
+	"title": "Fejezet 3: Az Őrző Amulett",
+	"narr_text": "Az amulett súlyos ezüstből készült, pók alakú, közepén vörösen izzó kővel. Ahogy nyakadba akasztod, furcsa bizsergést érzel, és mintha a gondolataid élesebbé válnának. A kazamata bejáratánál állva észreveszed, hogy az amulett gyengén pulzál, mintha figyelmeztetni akarna valamire. Ahogy belépsz, a falakon lévő pókhálók mintha elhúzódnának tőled, utat engedve a lépcsőn lefelé. Mély, dohos levegő áramlik felfelé a sötétségből.",
+	"choices": {
+	  "1": {
+		"text": "Ereszkedj le a lépcsőn az amulett védelmében",
+		"output": "004_amulettvedelem"
+	  },
+	  "2": {
+		"text": "Vágj le egy pókhálót és vizsgáld meg az amulett hatását",
+		"output": "004_amulettproba"
+	  },
+	  "3": {
+		"text": "Hívj segítséget a várból, mielőtt továbbmennél",
+		"output": "004_segitsegamuletthez"
+	  }
+	}
+  },
+  
+  "003_oregremetelakja": {
+	"title": "Fejezet 3: Az Erdei Remete",
+	"narr_text": "A fogadós elmondja, hogy egyetlen ember él még, aki szembenézett a kazamata szörnyével és túlélte: egy Gábor nevű remete, aki az erdő mélyén él. Hosszú gyaloglás után egy mohával benőtt kunyhóra bukkansz. Az ajtóban egy félszemű, ősz öregember ül, ki mintha várt volna rád. 'Tudtam, hogy jönni fogsz,' morogja. 'Álmomban láttalak, ahogy leereszkedsz a Fonó barlangjába.' Az öreg megmutatja csonka karját. 'Ez volt az ára, hogy élve kijutottam. De megtanultam valamit, amit most átadok neked.'",
+	"choices": {
+	  "1": {
+		"text": "Hallgasd meg a remete tanácsát",
+		"output": "004_remetetanacs"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, hogyan menekült meg",
+		"output": "004_remetemenekules"
+	  },
+	  "3": {
+		"text": "Kérd meg, hogy kísérjen el a kazamatához",
+		"output": "004_remetekiser"
+	  }
+	}
+  },
+  
+  "003_pergamenpletyka": {
+	"title": "Fejezet 3: A Pergamen Legendája",
+	"narr_text": "A fogadós szeme tágra nyílik. 'Szóval létezik!' kiált fel. Elmondja, hogy a pergamen állítólag a Fonó megidézésének és megkötésének rituáléját tartalmazza. A legenda szerint Zoltán lovag nem megölte, csupán álomba kényszerítette a lényt, mert tudta, hogy ha meghal, még hatalmasabb formában születik újjá. 'Ha a pergament keresed,' suttogja a fogadós, 'meg kell találnod az oltárt a kazamata legmélyén. Ott láttam utoljára Zoltán lovagot a nagy csata éjszakáján, mielőtt eltűnt örökre.'",
+	"choices": {
+	  "1": {
+		"text": "Köszönd meg az információt és indulj a kazamatába",
+		"output": "004_indulasoltar"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, hogyan néz ki pontosan az oltár",
+		"output": "004_oltarleiras"
+	  },
+	  "3": {
+		"text": "Érdeklődj, tud-e többet a rituáléról",
+		"output": "004_ritualeleiras"
+	  }
+	}
+  },
+  
+  "003_lepcsofolyoso": {
+	"title": "Fejezet 3: A Tekergő Folyosók",
+	"narr_text": "A lépcső alján nyirkos folyosó vezet tovább. A falakat vastag pókhálóréteg borítja, melyben apró csontok és meghatározhatatlan tárgyak akadtak fenn. Minden lépésed alatt reccsent valami. Hamarosan elágazáshoz érsz: a bal oldali járat látszólag természetes barlangban folytatódik, a jobb oldali egyértelműen emberi kéz munkája, kövezett és boltíves. A távolból halk csöpögés és különös, kattogó hang hallatszik.",
+	"choices": {
+	  "1": {
+		"text": "Válaszd a természetes barlangjáratot",
+		"output": "004_barlangut"
+	  },
+	  "2": {
+		"text": "Haladj tovább a kövezett folyosón",
+		"output": "004_kovezett"
+	  },
+	  "3": {
+		"text": "Állj meg és hallgatózz alaposabban",
+		"output": "004_hallgatozas"
+	  }
+	}
+  },
+  
+  "003_pokhalok": {
+	"title": "Fejezet 3: A Különös Hálók",
+	"narr_text": "Kardod hegyével megérinted az egyik hálót, mely nem szakad el, hanem megrezzen – és a rezgés továbbhalad, mintha jelzést küldene a mélybe. A háló anyaga selymes, mégis erős, mint a drótkötelek. Ahogy közelebbről megvizsgálod, apró runaszerű mintákat veszel észre a szálak mentén. Hirtelen a falak megremegnek, és távoli, mély kattogás hallatszik, mintha valami hatalmas mozogna odalent. A pókhálók feszülni kezdenek, és a falhoz préselnek egy emberi csontvázat, melyet eddig rejtettek.",
+	"choices": {
+	  "1": {
+		"text": "Vizsgáld meg a csontvázat",
+		"output": "004_csontváz"
+	  },
+	  "2": {
+		"text": "Próbáld értelmezni a runajeleket",
+		"output": "004_runajel"
+	  },
+	  "3": {
+		"text": "Siess le a lépcsőn, mielőtt valami feljön",
+		"output": "004_gyorsle"
+	  }
+	}
+  },
+  
+  "003_visszaavarnephez": {
+	"title": "Fejezet 3: Segítség a Várból",
+	"narr_text": "Visszatérve a várba, elmondod tapasztalataidat. A gróf két veterán katonáját, Gellértet és Márkot ajánlja fel kísérőnek. A fegyvertárból választhatsz magadnak jobb felszerelést: egy számszeríjat ezüsthegyű nyilakkal, egy ősi, rúnákkal díszített pajzsot, vagy egy üvegcsét szentelt olajjal. Mielőtt újra elindulnátok, az öreg Marzio, a vár mágusa is megjelenik, és figyelmeztet: 'A Fonó érzékeli a félelmet. Rettegjetek tőle, és megtalál benneteket.'",
+	"choices": {
+	  "1": {
+		"text": "Válaszd a számszeríjat és az ezüstnyilakat",
+		"output": "004_szamszerij"
+	  },
+	  "2": {
+		"text": "Válaszd a rúnás pajzsot",
+		"output": "004_runaspajzs"
+	  },
+	  "3": {
+		"text": "Válaszd a szentelt olajat",
+		"output": "004_szenteltolaj"
+	  }
+	}
+  },
+  
+  "004_varazsige": {
+	"title": "Fejezet 4: A Védelmező Szavak",
+	"narr_text": "A varázsige – 'Araneae vinculum tenebris' – visszhangzik elmédben, ahogy leereszkedsz a kazamata nyirkos lépcsőin. A latin szavak mintha halvány pajzsot vonnának köréd, és észreveszed, hogy a pókhálók elhúzódnak utadból. A lépcső egy tágas csarnokba vezet, ahol egykor őrök állomásozhattak. Az egyik fal mellett korhadt asztal, rajta régi térkép, amely a kazamata felső szintjét ábrázolja. A padlón friss vonszolási nyomok vezetnek a keleti átjáró felé, melyet különösen sűrű hálók borítanak.",
+	"choices": {
+	  "1": {
+		"text": "Tanulmányozd a térképet",
+		"output": "005_terkep"
+	  },
+	  "2": {
+		"text": "Kövesd a vonszolási nyomokat",
+		"output": "005_vonszolas"
+	  },
+	  "3": {
+		"text": "Próbálj átvágni a háló-függönyön a varázsige erejével",
+		"output": "005_haloatvagas"
+	  }
+	}
+  },
+  
+  "004_tudos": {
+	"title": "Fejezet 4: Balduin, a Krónikás",
+	"narr_text": "Balduin mester, a vár öreg krónikása, remegő kézzel veszi át a pergament. 'A Fonó pecsétje,' suttogja. 'Azt hittem, csak legenda.' Az öreg előhúz egy vastag, poros könyvet, és fellapozza. A könyvben Zoltán lovag naplója olvasható, melyben leírja, hogyan idézett meg egy 'idegenvilági entitást', hogy segítsen legyőzni ellenségeit. De a lény túl hatalmasnak bizonyult, és saját teremtője ellen fordult. A napló hirtelen megszakad, helyette egy másik kézírással csak ennyi áll: 'A lovag feláldozta magát, hogy álomba kényszerítse a Fonót. Amíg vére folyik leszármazottaiban, addig a bestia béklyója kitart.'",
+	"choices": {
+	  "1": {
+		"text": "Kérdezd meg, mit jelent ez Kázmér grófra nézve",
+		"output": "005_grofkotodes"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, hogyan lehet végleg elpusztítani a lényt",
+		"output": "005_veglegesveg"
+	  },
+	  "3": {
+		"text": "Köszönd meg az információt és indulj a kazamatába",
+		"output": "005_tudosutani"
+	  }
+	}
+  },
+  
+  "004_konyvtar": {
+	"title": "Fejezet 4: A Grófi Könyvtár",
+	"narr_text": "A vár könyvtára évszázadok tudását őrzi. Hosszas kutatás után találsz egy feljegyzést 'A mélység lényei' című kéziratban: 'A Fonó, kit némely kultúrákban Fekete Anyaként tisztelnek, az emberiség előtti időkből származó entitás. Nyolc lába mindegyike más síkra nyúlik, tekintete a lélek fonalait bogozza ki. Áldozatait hálójába csábítja, befonja, és lassan emészti fel nem csak testüket, de lelküket is, hogy álmaikon táplálkozzon.' A könyv szerint egyetlen sebezhető pontja a hasi részen található, melyet kemény páncél véd.",
+	"choices": {
+	  "1": {
+		"text": "Keress további információt a gyenge pontjáról",
+		"output": "005_gyengepont"
+	  },
+	  "2": {
+		"text": "Nézz utána, hogyan lehet megtörni a lény hipnotikus erejét",
+		"output": "005_hipnotikustores"
+	  },
+	  "3": {
+		"text": "Elegendő információ birtokában indulj a kazamatába",
+		"output": "005_konyvtarutani"
+	  }
+	}
+  },
+  
+  "004_ezustpor": {
+	"title": "Fejezet 4: Az Ezüst Védelem",
+	"narr_text": "Az ezüstpor és a görbe tőr biztonságot adó súlyával lépsz be a kazamatába. A lépcső alján szűk folyosó vezet tovább, ahol az ezüstport szórva magad elé, látod, ahogy a pókhálók sistergő hangok kíséretében húzódnak vissza. A folyosó hamarosan egy ősi oltárterembe vezet, melynek közepén kőoltár áll. Az oltáron megszáradt vér és friss áldozati nyomok. A terem mennyezetéről vastag hálócsövek lógnak le, melyek mélyén homályos mozgást vélsz felfedezni.",
+	"choices": {
+	  "1": {
+		"text": "Vizsgáld meg az oltárt",
+		"output": "005_oltarvizsgalat"
+	  },
+	  "2": {
+		"text": "Szórj ezüstport a hálócsövekre",
+		"output": "005_csovekre"
+	  },
+	  "3": {
+		"text": "Kövesd az oltár mögött nyíló alagút nyomait",
+		"output": "005_oltaralalagut"
+	  }
+	}
+  },
+  
+  "004_zoltanlovag": {
+	"title": "Fejezet 4: Zoltán Lovag Története",
+	"narr_text": "Marzio mágus tekintete a távolba réved. 'Zoltán lovagot elvakította a hatalomvágy. Ősi könyvekben olvasott a Fonóról, és azt hitte, szolgálatába állíthatja. A rituálé, amit végrehajtott, áttörte a világok közötti falat.' A varázsló egy polchoz lép, és egy ősi kardot vesz elő. 'Ez volt az övé. Ezzel sebesítette meg a lényt, mielőtt feláldozta magát, hogy pecséttel kösse oda. A pecsétet saját vérével hitelesítette, és a varázslat erejét saját vérvonalához kötötte.' A kard pengéjén furcsa, alvadt feketeség látható, ami nem mosható le.",
+	"choices": {
+	  "1": {
+		"text": "Kérd el a kardot a küldetésedhez",
+		"output": "005_zoltankard"
+	  },
+	  "2": {
+		"text": "Kérdezd meg, gyengül-e a pecsét Kázmér gróf miatt",
+		"output": "005_pecsetgyengul"
+	  },
+	  "3": {
+		"text": "Érdeklődj, találkozott-e személyesen a Fonóval",
+		"output": "005_marziotalalkozo"
+	  }
+	}
+  },
+  
+  "004_gyozelemterv": {
+	"title": "Fejezet 4: A Fonó Legyőzésének Terve",
+	"narr_text": "Marzio mágus mélyet sóhajt. 'A lényt nem lehet elpusztítani, csupán megkötni vagy visszaküldeni saját síkjára. Ehhez három dologra lesz szükséged: Először, meg kell találnod Zoltán lovag kardját, melyet a lény vérével kovácsoltak egybe. Másodszor, a rituáléhoz kell egy Holló-vérvonalból származó önkéntes áldozat. Harmadszor, a rituálét az ötszögletű csillagoltáron kell végrehajtani, mely a kazamata legmélyén található.' A varázsló figyelmeztetően hozzáteszi: 'Ne nézz a szemébe. A gondolatokat olvas, és legféltettebb emlékeidet használja fel ellened.'",
+	"choices": {
+	  "1": {
+		"text": "Kérdezd meg, hol találod a kardot",
+		"output": "005_kardkereses"
+	  },
+	  "2": {
+		"text": "Érdeklődj, kit lehetne önkéntes áldozatnak felkérni",
+		"output": "005_aldozatkereses"
+	  },
+	  "3": {
+		"text": "Kérd meg, rajzolja le a csillagoltárt",
+		"output": "005_csillagoltar"
+	  }
+	}
+  },
+  
+  "004_vernyomok": {
+	"title": "Fejezet 4: A Véres Nyom",
+	"narr_text": "A vércseppek egyre gyakoribbá válnak, ahogy követed a középső járatot. A folyosó kiszélesedik, és egy hatalmas, természetes barlangterembe vezet. A terem távoli sarkában friss tetemek – két paraszt és egy vadász – lógnak óriási hálóba gabalyodva. Testükből folyékony massza csorog egy alattuk lévő medencébe. A mennyezetről és falakról lelógó hálók árnyékot vetnek a terem közepén álló oltárra, melyen egy emberi koponya nyugszik, szemüregeiben zöldes fénnyel.",
+	"choices": {
+	  "1": {
+		"text": "Próbáld kiszabadítani az áldozatokat",
+		"output": "005_aldozatszabaditas"
+	  },
+	  "2": {
+		"text": "Vizsgáld meg az oltárt és a koponyát",
+		"output": "005_koponyaoltar"
+	  },
+	  "3": {
+		"text": "Kerüld meg a termet a falak mentén",
+		"output": "005_falatkerules"
+	  }
+	}
+  },
+  
+  "004_szarazjarat": {
+	"title": "Fejezet 4: A Száraz Járat",
+	"narr_text": "A bal szélső járat meglepően száraz és jól karbantartott. A falak mentén fáklyatartók sorakoznak, némelyikben mintha nemrég égett volna fény. Hamarosan egy kanyar után kisebb kamrához érkezel, ami egykor a kazamata őreinek pihenőhelyeként szolgálhatott. Rozsdás fegyverek, korhadt padok, és egy hordó víz található itt. A kamra túlsó felén három ajtó nyílik, az egyiket mintha nemrég nyitották volna ki – a pókhálók el vannak szakítva.",
+	"choices": {
+	  "1": {
+		"text": "Az újonnan használt ajtón menj tovább",
+		"output": "005_frissajto"
+	  },
+	  "2": {
+		"text": "Igyál a hordó vizéből, hogy felfrissülj",
+		"output": "005_hordo"
+	  },
+	  "3": {
+		"text": "Lőjj ki egy tűzlabdát \n -20 mana",
+		"requirement": {"mana": 20},
+		"buffs": {"mana": -20, "health": 1},
+		"output": "005_pihenoatnezes",
+		"failed_output": "005_menekules"
+	  }
+	}
+  }
+}
